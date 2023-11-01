@@ -1,0 +1,7 @@
+C:\Users\prdb\Desktop\bus_truck\bin\Debug\bus_truck.exe.config
+C:\Users\prdb\Desktop\bus_truck\bin\Debug\bus_truck.exe
+C:\Users\prdb\Desktop\bus_truck\bin\Debug\bus_truck.pdb
+C:\Users\prdb\Desktop\bus_truck\obj\Debug\bus_truck.csproj.AssemblyReference.cache
+C:\Users\prdb\Desktop\bus_truck\obj\Debug\bus_truck.csproj.CoreCompileInputs.cache
+C:\Users\prdb\Desktop\bus_truck\obj\Debug\bus_truck.exe
+C:\Users\prdb\Desktop\bus_truck\obj\Debug\bus_truck.pdb
