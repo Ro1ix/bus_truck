@@ -32,18 +32,16 @@ namespace bus_truck
                 double weight = people * avgWeight;
                 Console.Write("\n(Скорость <= 60 км/ч  --  топливо тратится в 1,5 раза меньше. Скорость > 90 км/ч  --  в 1,5 раза больше)\nВведите скорость: ");
                 double speed = Convert.ToDouble(Console.ReadLine());
-                if (weight >= 1000)
-                    speed /= 1.5;
-                else if (weight >= 2000)
-                    speed /= 2;
+                if (weight >= 2000)
+                    speed = Math.Round(speed / 2, 2);
+                else if (weight >= 1000)
+                    speed = Math.Round(speed / 1.5, 2);
                 Console.Write("\nВведите расход топлива на 100 км: ");
-                double rashod;
+                double rashod = Convert.ToDouble(Console.ReadLine());
                 if (speed <= 60)
-                    rashod = Convert.ToDouble(Console.ReadLine()) / 1.5;
+                    rashod = Math.Round(rashod / 1.5, 2);
                 else if (speed > 90)
-                    rashod = Convert.ToDouble(Console.ReadLine()) * 1.5;
-                else
-                    rashod = Convert.ToDouble(Console.ReadLine());
+                    rashod = Math.Round(rashod * 1.5, 2);
                 Bus bus = new Bus(bak_max, bak, weight, speed, rashod);
                 bus.InfoOut();
             }
@@ -62,21 +60,17 @@ namespace bus_truck
                     weight = Convert.ToDouble(Console.ReadLine());
                 }
                 Console.Write("\n(Скорость <= 60 км/ч  --  топливо тратится в 1,5 раза меньше. Скорость > 90 км/ч  --  в 1,5 раза больше)\nВведите скорость: ");
-                double speed;
-                if (weight >= 2500)
-                    speed = Convert.ToDouble(Console.ReadLine()) / 1.5;
-                else if (weight >= 4000)
-                    speed = Convert.ToDouble(Console.ReadLine()) / 2;
-                else
-                    speed = Convert.ToDouble(Console.ReadLine());
+                double speed = Convert.ToDouble(Console.ReadLine());
+                if (weight >= 4000)
+                    speed = Math.Round(speed / 2, 2);
+                else if (weight >= 2500)
+                    speed = Math.Round(speed / 1.5, 2);
                 Console.Write("\nВведите расход топлива на 100 км: ");
-                double rashod;
+                double rashod = Convert.ToDouble(Console.ReadLine());
                 if (speed <= 60)
-                    rashod = Convert.ToDouble(Console.ReadLine()) / 1.5;
+                    rashod = Math.Round(rashod / 1.5, 2);
                 else if (speed > 90)
-                    rashod = Convert.ToDouble(Console.ReadLine()) * 1.5;
-                else
-                    rashod = Convert.ToDouble(Console.ReadLine());
+                    rashod = Math.Round(rashod * 1.5, 2);
                 Truck truck = new Truck(bak_max, bak, weight, speed, rashod);
                 truck.InfoOut();
             }
