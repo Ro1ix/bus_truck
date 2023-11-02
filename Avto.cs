@@ -16,7 +16,7 @@ namespace bus_truck
         protected double km_max;
         protected double km;
         protected Random random = new Random();
-        public virtual void InfoIn()
+        protected virtual void InfoIn()
         {
             Console.Write("Введите объём бака: ");
             bak_max = Convert.ToInt32(Console.ReadLine());

@@ -8,7 +8,11 @@ namespace bus_truck
 {
     internal class Bus : Avto
     {
-        public override void InfoIn()
+        public void Start()
+        {
+            InfoIn();
+        }
+        protected override void InfoIn()
         {
             base.InfoIn();
             int avgWeight = 62;

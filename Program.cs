@@ -19,7 +19,7 @@ namespace bus_truck
                 Console.Clear();
                 Console.WriteLine("АВТОБУС\n");
                 Bus bus = new Bus();
-                bus.InfoIn();
+                bus.Start();
                 bus.InfoOut();
             }
             else if (input == "2")
@@ -27,7 +27,7 @@ namespace bus_truck
                 Console.Clear();
                 Console.WriteLine("ГРУЗОВИК\n");
                 Truck truck = new Truck();
-                truck.InfoIn();
+                truck.Start();
                 truck.InfoOut();
             }
             else
