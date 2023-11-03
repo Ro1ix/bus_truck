@@ -31,9 +31,16 @@ namespace bus_truck
             Console.Write("\nВведите расход топлива на 100 км: ");
             rashod = Convert.ToDouble(Console.ReadLine());
         }
-        public void InfoOut()
+        protected void InfoOut()
         {
             Console.WriteLine($"Топливо: {bak}/{bak_max}\nВес: {weight}\nРеальная скорость: {speed}\nРеальный расход: {rashod}");
+        }
+        protected void Trip()
+        {
+            km_max = random.Next(10, 501);
+            Console.WriteLine($"\nВы собираетесь проехать такое расстояние:\n{km_max} км\n\nПоехали!\n");
+            km = rashod / 100 * bak;
+
         }
     }
 }

@@ -11,6 +11,7 @@ namespace bus_truck
         public void Start()
         {
             InfoIn();
+            InfoOut();
         }
         protected override void InfoIn()
         {
