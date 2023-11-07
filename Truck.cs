@@ -12,6 +12,7 @@ namespace bus_truck
         {
             InfoIn();
             InfoOut();
+            Trip();
         }
         protected override void InfoIn()
         {
@@ -27,7 +28,7 @@ namespace bus_truck
                 speed = Math.Round(speed / 2, 2);
             else if (weight >= 2500)
                 speed = Math.Round(speed / 1.5, 2);
-            if (speed <= 60)
+            if (speed <= 40)
                 rashod = Math.Round(rashod * 2, 2);
             else if (speed > 90)
                 rashod = Math.Round(rashod * 1.5, 2);
