@@ -27,6 +27,14 @@ namespace bus_truck
                 people = Convert.ToInt32(Console.ReadLine());
             }
             weight = people * avgWeight;
+        }
+        protected override void InfoOut()
+        {
+            Console.Write($"\nВес: {weight} кг");
+            base.InfoOut();
+        }
+        protected override void Trip()
+        {
             if (weight >= 2000)
                 speed = Math.Round(speed / 2, 2);
             else if (weight >= 1000)
@@ -35,11 +43,7 @@ namespace bus_truck
                 rashod = Math.Round(rashod * 2, 2);
             else if (speed > 90)
                 rashod = Math.Round(rashod * 1.5, 2);
-        }
-        protected override void InfoOut()
-        {
-            Console.Write($"\nВес: {weight} кг");
-            base.InfoOut();
+            base.Trip();
         }
     }
 }

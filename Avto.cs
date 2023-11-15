@@ -45,7 +45,7 @@ namespace bus_truck
         {
             Console.WriteLine($"\nСкорость: {speed} км/ч\nРасход: {rashod} л/100км\nПройдено: {km} км\nОсталось: {km_max - km} км\nТопливо: {bak}/{bak_max} л");
         }
-        protected void Trip()
+        protected virtual void Trip()
         {
             km = 0;
             km_max = random.Next(10, 751);
