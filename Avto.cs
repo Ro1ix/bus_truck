@@ -10,7 +10,6 @@ namespace bus_truck
     {
         protected int bak_max;
         protected double bak;
-        protected double weight;
         protected double speed;
         protected double rashod;
         protected double km_max = 0;
@@ -42,9 +41,9 @@ namespace bus_truck
                     Console.WriteLine("ОШИБКА!!! Попробуйте ещё раз");
             } while (rashod < 7 || rashod > 15);
         }
-        protected void InfoOut()
+        protected virtual void InfoOut()
         {
-            Console.WriteLine($"\nВес: {weight} кг\nРеальная скорость: {speed} км/ч\nРеальный расход: {rashod} л/100км\nПройдено: {km} км\nОсталось: {km_max - km} км\nТопливо: {bak}/{bak_max} л");
+            Console.WriteLine($"\nСкорость: {speed} км/ч\nРасход: {rashod} л/100км\nПройдено: {km} км\nОсталось: {km_max - km} км\nТопливо: {bak}/{bak_max} л");
         }
         protected void Trip()
         {

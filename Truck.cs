@@ -8,6 +8,7 @@ namespace bus_truck
 {
     internal class Truck : Avto
     {
+        protected double weight;
         public void Start()
         {
             InfoIn();
@@ -32,6 +33,11 @@ namespace bus_truck
                 rashod = Math.Round(rashod * 2, 2);
             else if (speed > 90)
                 rashod = Math.Round(rashod * 1.5, 2);
+        }
+        protected override void InfoOut()
+        {
+            Console.Write($"\nВес: {weight} кг");
+            base.InfoOut();
         }
     }
 }
